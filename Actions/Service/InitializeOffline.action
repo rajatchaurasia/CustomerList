@@ -1,0 +1,28 @@
+{
+    "Service": "/CustomerList/Services/com_sap_edm_sampleservice_v2.service",
+    "DefiningRequests": [{
+            "Name": "Customers",
+            "Query": "Customers"
+        },
+        {
+            "Name": "Products",
+            "Query": "Products"
+        },
+        {
+            "Name": "SalesOrderHeaders",
+            "Query": "SalesOrderHeaders"
+        },
+        {
+            "Name": "SalesOrderItems",
+            "Query": "SalesOrderItems"
+        }
+    ],
+    "_Type": "Action.Type.ODataService.Initialize",
+    "ShowActivityIndicator": true,
+    "ActivityIndicatorText": "Downloading...",
+    "ActionResult": {
+        "_Name": "init"
+    },
+    "OnSuccess": "/CustomerList/Actions/Service/InitializeOfflineSuccessMessage.action",
+    "OnFailure": "/CustomerList/Actions/Service/InitializeOfflineFailureMessage.action"
+}
